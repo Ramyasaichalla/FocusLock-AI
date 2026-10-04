@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FocusLock AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>🔒 FocusLock AI</h1>
+            <p>Stay focused. Get things done.</p>
+        </div>
+
+
+        <!-- Focus Setup -->
+        <div class="card">
+
+            <h2>🎯 Create Your Focus Session</h2>
+
+            <label for="task">
+                What do you want to focus on?
+            </label>
+
+            <input
+                type="text"
+                id="task"
+                placeholder="Example: Solve LeetCode problems"
+            >
+
+
+            <label for="duration">
+                Focus time (minutes)
+            </label>
+
+            <input
+                type="number"
+                id="duration"
+                value="25"
+                min="1"
+                max="180"
+            >
+
+
+            <button onclick="startFocus()">
+                🔒 Start Focus
+            </button>
+            <div id="aiPlan" class="ai-plan"></div>
+
+        </div>
+
+
+        <!-- Timer -->
+        <div class="card">
+
+            <h2>⏱️ Focus Timer</h2>
+            <div class="timer" id="timer">
+    25:00
+</div>
+
+<div class="timer-buttons">
+
+    <button onclick="pauseFocus()" id="pauseBtn">
+        ⏸️ Pause
+    </button>
+
+    <button onclick="stopFocus()" id="stopBtn">
+        🛑 Stop Session
+    </button>
+
+</div>
+
+<p class="status" id="status">
+    Ready to focus
+</p>
+
+          
+        </div>
+
+
+        <!-- Websites -->
+        <div class="card">
+
+            <h2>🌐 Focus Environment</h2>
+
+            <div class="websites">
+
+                <!-- Allowed -->
+                <div class="website-box allowed">
+
+                    <h3>✅ Allowed</h3>
+
+                    <ul>
+                        <li>🌐 LeetCode</li>
+                        <li>🐙 GitHub</li>
+                        <li>📚 Python Docs</li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Blocked -->
+                <div class="website-box blocked">
+
+                    <h3>🚫 Blocked</h3>
+
+                    <ul>
+                        <li>💬 WhatsApp</li>
+                        <li>📸 Instagram</li>
+                        <li>▶️ YouTube</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
