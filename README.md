@@ -54,14 +54,13 @@ This makes the project an example of how open AI models can be used to build use
 FocusLock-AI/
 │
 ├── app.py
-├── .env
 ├── .gitignore
+├── README.md
 │
 ├── templates/
 │   └── index.html
 │
-├── static/
-│   ├── style.css
-│   └── script.js
-│
-└── README.md
+└── static/
+    ├── style.css
+    └── script.js
+```
